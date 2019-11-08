@@ -3,7 +3,7 @@
 https://github.com/PandaLz/PrimeRT-Lz
 
 ### Method 1
-#### Find sieve of x * 2 squared
+#### Find sieve of (x * 2) squared
 
 #### Example value x = 5
 
@@ -95,5 +95,38 @@ H |   3   |   5   |   7   |   9   |  11
 44|   2   |   2   |   3   |   2   |   9 
 45| **0** |   3   |   4   |   3   |   10 
 46|   1   |   4   |   5   |   4   | **0** 
+
+Now can discard the rows 25 and above that contains 0 values as not primes only left is to determine the prime number from value x, observe last column of the left only contains two 0 values, the middle 0 will define the process to use
+
+From values below middle 0:
+First get (x * 2) squared, then take the value of last column * 2 - 1 and add both values.
+
+From values above middle 0:
+Get ((x * 2) + 1) squared, then take the value of last column * 2 and add both values.
+
+H |   3   |   5   |   7   |   9   |   11  | prime |
+--|-------|-------|-------|-------|-------|-------|
+25|   1   |   3   |   5   |   1   |   1   |  101  |
+26|   2   |   4   |   6   |   2   |   2   |  103  |
+27| **0** | **0** | **0** |   3   |   3   |       |
+28|   1   |   1   |   1   |   4   |   4   |  107  |
+29|   2   |   2   |   2   |   5   |   5   |  109  |
+30| **0** |   3   |   3   |   6   |   6   |       |
+31|   1   |   4   |   4   |   7   |   7   |  113  |
+32|   2   | **0** |   5   |   8   |   8   |       |
+33| **0** |   1   |   6   | **0** |   9   |       |
+34|   1   |   2   | **0** |   1   |   10  |       |
+35|   2   |   3   |   1   |   2   | **0** |       |
+36| **0** |   4   |   2   |   3   |   1   |       |
+37|   1   | **0** |   3   |   4   |   2   |       |
+38|   2   |   1   |   4   |   5   |   3   |  127  |
+39| **0** |   2   |   5   |   6   |   4   |       |
+40|   1   |   3   |   6   |   7   |   5   |  131  |
+41|   2   |   4   | **0** |   8   |   6   |       |
+42| **0** | **0** |   1   | **0** |   7   |       |
+43|   1   |   1   |   2   |   1   |   8   |  137  |
+44|   2   |   2   |   3   |   2   |   9   |  139  |
+45| **0** |   3   |   4   |   3   |   10  |       |
+46|   1   |   4   |   5   |   4   | **0** |       |
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
