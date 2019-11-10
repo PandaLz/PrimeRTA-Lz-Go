@@ -99,7 +99,7 @@ But each step after 3 will Switch starting point this way:
 * When 3, Z = 0
 * When 5, Z = Z + (3 * 4) = 0 + 12 = 12 then C - 1 = 2
 * When 7, Z = Z + (2 * 4) = 12 + 8 = 20 then C - 1 = 1
-* When 9, Z = Z + (1 * 4) = 20 + 4 = 24 then C - 1 = 1
+* When 9, Z = Z + (1 * 4) = 20 + 4 = 24 then C - 1 = 0
 * When 11, Z = Z + (0 * 4) = 20 + 0 = 24 then end loop
 
 Table 2
